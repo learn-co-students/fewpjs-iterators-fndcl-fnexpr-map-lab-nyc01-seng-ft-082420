@@ -12,5 +12,10 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(sen=>{
+    let tokens = sen.split(' ')
+    let capitalizedTokens = tokens.map(tok => tok.charAt(0).toUpperCase() + tok.slice(1))
+    let response = capitalizedTokens.join(' ')
+    return response
+  })
 }
